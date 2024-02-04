@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "$id": "http://mikekon.ru/api/schema_json/schema01.json",
+  "title": "Test schema",
+  "description": "Тестовая схема",
+  "type": "object",
+  "properties":{
+	  "id":{
+		  "description":"id",
+		  "type":"integer"	  
+	  },
+	  "name":{
+		  "description":"Название",
+		  "type":"string"
+	  },
+	  "value":{
+		  "description":"Значение",
+		  "type":"string"
+	  },
+	  "created":{
+		  "description":"создание",
+		  "type":"string",
+		  "pattern":"^\d{4}-((0[0-9])|(1[0-2]))-(([0-2][0-9])|(3[0-1]))$"
+	  },
+	  "type":{
+		  "description": "типы значения",
+		  "type": "string",
+		  "enum": ["string","number","date"]
+	  }
+  }
+}
